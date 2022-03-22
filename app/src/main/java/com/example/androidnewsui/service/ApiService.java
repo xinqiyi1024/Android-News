@@ -30,6 +30,7 @@ public interface ApiService {
 
     /**
      * 根据id获取类别
+     *
      * @param categoryId
      * @return
      */
@@ -47,6 +48,7 @@ public interface ApiService {
 
     /**
      * 根据id获取新闻
+     *
      * @param newsKeyWord
      * @return
      */
@@ -55,6 +57,7 @@ public interface ApiService {
 
     /**
      * 获取所有新闻
+     *
      * @return
      */
     @GET("/base/newsList")
@@ -62,6 +65,7 @@ public interface ApiService {
 
     /**
      * 注册
+     *
      * @param body
      * @return
      */
@@ -70,6 +74,7 @@ public interface ApiService {
 
     /**
      * 根据关键字查找用户
+     *
      * @param userKeyWord
      * @return
      */
@@ -78,6 +83,7 @@ public interface ApiService {
 
     /**
      * 退出登录
+     *
      * @param token 用户令牌
      * @return
      */
@@ -86,19 +92,21 @@ public interface ApiService {
 
     /**
      * 更新用户信息
+     *
      * @param token 用户令牌
-     * @param body 请求体
+     * @param body  请求体
      * @return
      */
     @POST("/users/updateInfo")
-    Call<SingleBool> updateInfo(@Header("token") String token,@Body RequestBody body);
+    Call<SingleBool> updateInfo(@Header("token") String token, @Body RequestBody body);
 
     /**
      * 更新用户密码
+     *
      * @param token 用户令牌
-     * @param body 请求体
+     * @param body  请求体
      * @return
      */
     @POST("/users/updatePassword")
-    Call<SingleBool> updatePassword(@Header("token") String token,@Body RequestBody body);
+    Call<SingleBool> updatePassword(@Header("token") String token, @Body RequestBody body);
 }
